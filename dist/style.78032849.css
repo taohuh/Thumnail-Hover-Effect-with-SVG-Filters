@@ -1,0 +1,85 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+
+  --color-text: #000;
+  --color-bg: #ccc5b8;
+  --color-thumb-caption-title: #fff;
+  --cursor-fill: #b74946;
+  --cursor-text: #000;
+
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+main {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto;
+}
+
+.cursor {
+  display: none;
+}
+
+.image-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  margin: 0 16px;
+}
+
+.item:nth-child(odd) {
+  padding-top: 40px;
+}
+
+.thumb {
+  position: relative;
+  width: 200px;
+  height: 220px;
+  overflow: hidden;
+}
+
+.thumb__caption-title {
+  color: var(--color-thumb-caption-title);
+}
+
+.distort {
+  pointer-events: none;
+  margin: -115px 0 0 -75px;
+}
+
+@media (any-pointer:fine) {
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  .cursor__inner {
+    fill: var(--cursor-fill);
+  }
+}
+
+/*# sourceMappingURL=/style.78032849.css.map */
